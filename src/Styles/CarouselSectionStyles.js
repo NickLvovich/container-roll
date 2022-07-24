@@ -20,21 +20,45 @@ export const CarouselSectionContainer = styled.div`
 
 export const SwiperContainer = styled(Swiper)`
   &.swiper{
-    height: 600px;
+    height: 700px;
     .swiper-slide{
       display: flex;
       flex-flow: column;
-      justify-content: space-evenly;
+      justify-content: space-around;
     }
-    //.swiper-button-prev {
-    //  left: 63% !important;
-    //  top: 40% !important;
-    //  transform-origin: left center;
-    //}
-    //.swiper-button-next {
-    //  left: 63% !important;
-    //  bottom: 49% !important;
-    //  transform-origin: left center;
+    .swiper-button-prev,
+    .swiper-button-next {
+      transform-origin: left center;
+      background-color: rgba(255,255,255,0.5);
+      border-radius: 50%;
+      border: 1px solid #F9FBFD80;
+      right: 10px;
+      padding: 10px;
+      color: #000 !important;
+      fill: black !important;
+      width: 8px;
+      height: 8px;
+      stroke: black !important;
+      @media (min-width: 1024px) {
+        width: 25px;
+        height: 25px;
+      }
+      @media (min-width: 1440px) {
+        width: 25px;
+        height: 25px;
+      }
+      &:after{
+        font-size: 1em;
+      }
+    }
+    .swiper-pagination{
+      .swiper-pagination-bullet{
+        background: #E5E7EB;
+        opacity: 0.4;
+      }
+      .swiper-pagination-bullet-active{
+        opacity: 1;
+      }
     }
   }
 `;
@@ -48,15 +72,24 @@ export const Img = styled.img`
 	}
 `;
 
+export const SwiperSlideWrapper = styled(SwiperSlide)`
+  position: relative;
+`
+
 export const ContainerWrapperData = styled.div`
 	box-sizing: border-box;
-	padding: 20px;
+  padding: 0 20px;
 
 	background: #151d2f;
 	/* White */
 
 	border: 1px solid #ffffff;
 	border-radius: 8px;
+  @media (min-width: 1024px) {
+    position: absolute;
+    top: 5%;
+    right: 10%;
+  }
 `;
 
 export const SwiperHeadingMob = styled.p`
