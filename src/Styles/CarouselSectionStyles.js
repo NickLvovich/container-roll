@@ -34,11 +34,11 @@ export const SwiperContainer = styled(Swiper)`
       border: 1px solid #F9FBFD80;
       right: 10px;
       padding: 10px;
-      color: #000 !important;
-      fill: black !important;
-      width: 8px;
-      height: 8px;
-      stroke: black !important;
+      color: #151d2f !important;
+      fill: #151d2f !important;
+      width: 0.8rem;
+      height: 0.8rem;
+      stroke: #151d2f !important;
       @media (min-width: 1024px) {
         width: 25px;
         height: 25px;
