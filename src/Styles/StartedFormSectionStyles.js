@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import PhoneInput from 'react-phone-input-2';
 import { Button } from '@material-ui/core';
-import BG from '../images/FormBg-small.svg';
 import { TextField, Select } from 'mui-rff';
+import BG from '../images/FormBg-small.svg';
 
 export const StartedFormWrapper = styled.div`
 	background: no-repeat url(${BG});

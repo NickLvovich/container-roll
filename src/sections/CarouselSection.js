@@ -5,6 +5,7 @@ import '../index.css';
 import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import { Navigation, Pagination, Mousewheel, Keyboard } from 'swiper';
 import {
 	CarouselSectionContainer,
 	ContainerWrapperData,
@@ -18,7 +19,6 @@ import {
 	SwiperHeadingMob,
 } from '../Styles/CarouselSectionStyles';
 import { containersData } from '../constants/Constants';
-import { Navigation, Pagination, Mousewheel, Keyboard } from 'swiper';
 import { useWindowWidth } from '../hooks';
 
 export const CarouselSection = () => {
@@ -26,11 +26,11 @@ export const CarouselSection = () => {
 	return (
 		<CarouselSectionContainer>
 			<SwiperContainer
-				cssMode={true}
-				navigation={true}
-				pagination={true}
-				mousewheel={true}
-				keyboard={true}
+				cssMode
+				navigation
+				pagination
+				mousewheel
+				keyboard
 				modules={[Navigation, Pagination, Mousewheel, Keyboard]}
 				className="mySwiper"
 			>

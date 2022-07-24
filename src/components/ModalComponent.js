@@ -3,16 +3,16 @@ import Backdrop from '@mui/material/Backdrop';
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import { useSpring, animated } from 'react-spring';
+import { Link } from 'gatsby';
 import NavigationComponent from './NavigationComponent';
 import ContactComponent from './ContactComponent';
-import { Link } from 'gatsby';
 import {
 	ContactWrapper,
 	ModalLink,
 	ModalList,
 } from '../Styles/ModalComponentStyles';
 
-const Fade = forwardRef(function Fade(props, ref) {
+const Fade = forwardRef((props, ref) => {
 	const { in: open, children, onEnter, onExited, ...other } = props;
 	const style = useSpring({
 		from: { opacity: 0 },

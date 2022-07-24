@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import Graphics from '../images/Graphics.png';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import Graphics from '../images/Graphics.png';
 
 export const CarouselSectionContainer = styled.div`
 	background-color: #141b2a;

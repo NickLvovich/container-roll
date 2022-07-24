@@ -1,4 +1,7 @@
 import React from 'react';
+import { Link } from 'gatsby';
+import { StaticImage } from 'gatsby-plugin-image';
+import Button from '@mui/material/Button';
 import {
 	BurgerWrapper,
 	HeadingLink,
@@ -8,9 +11,6 @@ import {
 	NavTranslate,
 	TypographyTranslate,
 } from '../Styles/NavigationComponentStyles';
-import { Link } from 'gatsby';
-import { StaticImage } from 'gatsby-plugin-image';
-import Button from '@mui/material/Button';
 import CloseBtn from '../images/close.svg';
 
 const NavigationComponent = ({ handleOpen, isCloseButton }) => {

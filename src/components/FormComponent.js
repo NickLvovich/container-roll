@@ -45,7 +45,7 @@ const FormComponent = () => {
 									name="name"
 									margin="none"
 									style={{ background: 'white', borderRadius: 8 }}
-									required={true}
+									required
 								/>
 							</FieldWrapper>
 							<FieldWrapper>
@@ -53,12 +53,12 @@ const FormComponent = () => {
 									onChange={(phone) => setPhoneNumber({ phone })}
 									name="phone"
 									label="Phone"
-									country={'gb'}
+									country="gb"
 									masks={{ fr: 'xx-xxx-xxx', at: 'xx-xxx-xxx' }}
 									isValid={(value, country) => {
 										if (value.match(/12345/)) {
-											return 'Invalid value: ' + value + ', ' + country.name;
-										} else return !value.match(/1234/);
+											return `Invalid value: ${  value  }, ${  country.name}`;
+										} return !value.match(/1234/);
 									}}
 									inputProps={{
 										name: 'phone',
@@ -75,7 +75,7 @@ const FormComponent = () => {
 									label="Email"
 									name="email"
 									margin="none"
-									required={true}
+									required
 								/>
 							</FieldWrapper>
 							<FieldWrapper>
