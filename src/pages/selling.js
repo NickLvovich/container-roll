@@ -1,8 +1,6 @@
 import React, { useState, useCallback } from 'react';
 import styled from 'styled-components';
 import '../index.css';
-import TrustedCompaniesSection from '../sections/TrustedCompaniesSection';
-import ServiceSection from '../sections/ServiceSection';
 import QuestionSection from '../sections/QuestionSection';
 import StartedFormSection from '../sections/StartedFormSection';
 import ContactSection from '../sections/ContactSection';
@@ -10,6 +8,7 @@ import SpringModal from '../components/ModalComponent';
 import HeaderSellingSection from '../sections/HeaderSellingSection';
 import HowItWorksSection from '../sections/HowItWorksSection';
 import CarouselSection from '../sections/CarouselSection';
+import SwiperGallerySection from "../sections/SwiperGallerySection";
 
 const Container = styled.div`
 	margin: 0;
@@ -34,6 +33,8 @@ const IndexPage = () => {
 			<HowItWorksSection />
 			<CarouselSection />
 			<QuestionSection />
+			<SwiperGallerySection first reverseDirection={true}/>
+			<SwiperGallerySection reverseDirection={false}/>
 			<StartedFormSection />
 			<ContactSection />
 			<SpringModal setOpen={setOpen} open={open} handleOpen={handleOpen} />

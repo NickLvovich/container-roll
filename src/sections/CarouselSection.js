@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import React from 'react';
+import { SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import '../index.css';
 import 'swiper/css/effect-fade';

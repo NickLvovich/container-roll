@@ -12,6 +12,7 @@ import {
 	TypographyHeadingQuestionWrapper,
 } from '../Styles/QuestionsComponentStyles';
 
+
 const QuestionSection = () => {
 	return (
 		<TrustedContainer>

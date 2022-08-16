@@ -1,25 +1,24 @@
 import styled from 'styled-components';
 import PhoneInput from 'react-phone-input-2';
 import { Button } from '@material-ui/core';
-import { TextField, Select } from 'mui-rff';
-import BG from '../images/FormBg-small.svg';
+import { TextField } from 'mui-rff';
 
 export const StartedFormWrapper = styled.div`
-	background: no-repeat url(${BG});
-	background-size: cover;
-	padding: 80px 20px 0 20px;
-	margin-top: 400px;
+	//background: no-repeat url(${BG});
+	background-color: #141B2A;
+	//background-size: cover;
+	padding: 30px 20px 0 20px;
 	@media (min-width: 1024px) {
-		padding: 200px 30vw 0 30vw;
+		padding: 100px 30vw 0 30vw;
 		margin-top: 100px;
 	}
 	@media (min-width: 1440px) {
 		margin-top: 50px;
-		padding: 200px 35vw 0 35vw;
+		padding: 100px 35vw 0 35vw;
 	}
 	@media (min-width: 2560px) {
 		margin-top: 50px;
-		padding: 200px 40vw 0 40vw;
+		padding: 100px 40vw 0 40vw;
 	}
 `;
 
@@ -60,7 +59,7 @@ export const SendButton = styled(Button)`
 	}
 	margin-top: 40px !important;
 	background: #3f65ea;
-	box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 	border-radius: 8px;
 	height: 52px;
 `;

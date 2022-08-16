@@ -8,6 +8,7 @@ import QuestionSection from '../sections/QuestionSection';
 import StartedFormSection from '../sections/StartedFormSection';
 import ContactSection from '../sections/ContactSection';
 import SpringModal from '../components/ModalComponent';
+import SwiperGallerySection from "../sections/SwiperGallerySection";
 
 const Container = styled.div`
 	margin: 0;
@@ -27,6 +28,8 @@ const IndexPage = () => {
 			<TrustedCompaniesSection />
 			<ServiceSection />
 			<QuestionSection />
+			<SwiperGallerySection first reverseDirection={true}/>
+			<SwiperGallerySection reverseDirection={false}/>
 			<StartedFormSection />
 			<ContactSection />
 			<SpringModal setOpen={setOpen} open={open} handleOpen={handleOpen} />
