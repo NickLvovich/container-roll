@@ -6,8 +6,10 @@ import mail from '../images/mail.png';
 import Lightning from '../images/Lightning.png';
 import Check from '../images/Check.png';
 import Case from '../images/Case.png';
-import Container from '../images/Container.png';
-import ContainerSmall from '../images/ContainerSmall.png';
+import SmallDryCubeContainer from '../images/SmallDryCubeContainer.png';
+import HighCube from '../images/HighCube.png';
+import BigDryCube from '../images/BigDryCube.png';
+import RefrigeratorContainer from '../images/RefrigeratorContainer.png';
 
 export const companies = [
 	{
@@ -128,53 +130,67 @@ export const workSystem = [
 
 export const containersData = [
 	{
-		img: Container,
-		imgSmall: ContainerSmall,
+		img: SmallDryCubeContainer,
+		imgSmall:  SmallDryCubeContainer,
 		alt: 'Selling/buying containers',
 		baige: "Marine 20' DC (Dry Cube)",
 		heading: 'Selling/buying containers',
 		text: 'Ships are typically larger than boats, but there is no universally accepted distinction between  ',
-		volume: '20 m²',
-		weight: '2000 kg²',
+		volume: '33 m²',
+		weight: '2200 kg',
+		load: '24800 kg',
+		iHeight: 'Height: 2390 mm',
+		iWidth: 'Width: 2350 mm',
+		iLong: 'Long: 5898 mm',
+		doorHeight: 'Height: 2280 mm',
+		doorWidth: 'Width: 2340 mm'
 	},
 	{
-		img: Container,
-		imgSmall: ContainerSmall,
+		img: HighCube,
+		imgSmall: HighCube,
 		alt: 'Container leasing',
-		baige: "Marine 20' DC (Dry Cube)",
+		baige: "40' High Cube (HC)",
 		heading: 'Container leasing',
 		text: 'Ships are typically larger than boats, but there is no universally accepted distinction between  ',
-		volume: '20 m²',
-		weight: '2000 kg²',
+		volume: '76,0 m³',
+		weight: '3990 kg',
+		load: '28570 kg',
+		iHeight: 'Height: 2690 mm',
+		iWidth: 'Width: 2350 mm',
+		iLong: 'Long: 12030 mm',
+		doorHeight: 'Height: 2579 mm',
+		doorWidth: 'Width: 240 mm'
 	},
 	{
-		img: Container,
-		imgSmall: ContainerSmall,
+		img: BigDryCube,
+		imgSmall: BigDryCube,
 		alt: 'Container leasing',
-		baige: "Marine 20' DC (Dry Cube)",
+		baige: "40' Dry Cube (DC)",
 		heading: 'Container leasing',
 		text: 'Ships are typically larger than boats, but there is no universally accepted distinction between  ',
-		volume: '20 m²',
-		weight: '2000 kg²',
+		volume: '67,0 m³',
+		weight: '3700 kg',
+		load: '28800 kg',
+		iHeight: 'Height: 2393 mm',
+		iWidth: 'Width: 2350 mm',
+		iLong: 'Long: 12035 mm',
+		doorHeight: 'Height: 2274 mm',
+		doorWidth: 'Width: 2339 mm'
 	},
 	{
-		img: Container,
-		imgSmall: ContainerSmall,
+		img: RefrigeratorContainer,
+		imgSmall: RefrigeratorContainer,
 		alt: 'Container leasing',
-		baige: "Marine 20' DC (Dry Cube)",
+		baige: "40' REEFER CONTAINER (RF)",
 		heading: 'Container leasing',
 		text: 'Ships are typically larger than boats, but there is no universally accepted distinction between  ',
-		volume: '20 m²',
-		weight: '2000 kg²',
-	},
-	{
-		img: Container,
-		imgSmall: ContainerSmall,
-		alt: 'Container leasing',
-		baige: "Marine 20' DC (Dry Cube)",
-		heading: 'Container leasing',
-		text: 'Ships are typically larger than boats, but there is no universally accepted distinction between  ',
-		volume: '20 m²',
-		weight: '2000 kg²',
-	},
+		volume: '58,7 m³',
+		weight: '3950 kg',
+		load: '28850 kg',
+		iHeight: 'Height: 2210 mm',
+		iWidth: 'Width: 2294 mm',
+		iLong: 'Long: 11577 mm',
+		doorHeight: 'Height: 2238 mm',
+		doorWidth: 'Width: 2286 mm'
+	}
 ];

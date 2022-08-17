@@ -7,6 +7,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Navigation, Pagination, Mousewheel, Keyboard } from 'swiper';
 import {
+	CarouselHeading, CarouselHeadingText,
 	CarouselSectionContainer,
 	ContainerWrapperData,
 	DataWrapper,
@@ -25,6 +26,8 @@ export const CarouselSection = () => {
 	const width = useWindowWidth();
 	return (
 		<CarouselSectionContainer>
+			<CarouselHeading>Providing different sizes of containers</CarouselHeading>
+			<CarouselHeadingText>A ship is a large watercraft that travels the world's oceans and other sufficiently deep </CarouselHeadingText>
 			<SwiperContainer
 				cssMode
 				navigation
@@ -41,9 +44,7 @@ export const CarouselSection = () => {
 							alt={containerItem.alt}
 						/>
 						<ContainerWrapperData>
-							{width < 420 && (
 								<SwiperHeadingMob>{containerItem.baige}</SwiperHeadingMob>
-							)}
 							<DataWrapper>
 								<DataWrapperItem>
 									<DataWrapperItemHeading>Volume</DataWrapperItemHeading>
@@ -51,21 +52,41 @@ export const CarouselSection = () => {
 										{containerItem.volume}
 									</DataWrapperItemText>
 								</DataWrapperItem>
-								<DataWrapperItem
-									style={{
-										marginLeft: 10,
-									}}
-								>
+								<DataWrapperItem>
 									<DataWrapperItemHeading>Weight</DataWrapperItemHeading>
 									<DataWrapperItemText>
 										{containerItem.weight}
 									</DataWrapperItemText>
 								</DataWrapperItem>
+								<DataWrapperItem>
+									<DataWrapperItemHeading>Load</DataWrapperItemHeading>
+									<DataWrapperItemText>
+										{containerItem.load}
+									</DataWrapperItemText>
+								</DataWrapperItem>
+								<DataWrapperItem>
+									<DataWrapperItemHeading>Inside paramerts</DataWrapperItemHeading>
+									<DataWrapperItemText>
+										{containerItem.iHeight}
+									</DataWrapperItemText>
+									<DataWrapperItemText>
+										{containerItem.iWidth}
+									</DataWrapperItemText>
+									<DataWrapperItemText>
+										{containerItem.iLong}
+									</DataWrapperItemText>
+								</DataWrapperItem>
+								<DataWrapperItem>
+									<DataWrapperItemHeading>Door size</DataWrapperItemHeading>
+									<DataWrapperItemText>
+										{containerItem.doorHeight}
+									</DataWrapperItemText>
+									<DataWrapperItemText>
+										{containerItem.doorWidth}
+									</DataWrapperItemText>
+								</DataWrapperItem>
 							</DataWrapper>
 						</ContainerWrapperData>
-						{width > 420 && (
-							<SwiperHeading>{containerItem.baige}</SwiperHeading>
-						)}
 					</SwiperSlide>
 				))}
 			</SwiperContainer>
