@@ -194,3 +194,9 @@ export const containersData = [
 		doorWidth: 'Width: 2286 mm'
 	}
 ];
+
+export const UserData = {
+		serviceID: `service_gnvaejb`, //userID
+		templateID: `template_2v0fdc6`,         //templateID
+		publicKey: `J14-B7lVxUoYku9ma`
+}

@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { Form } from 'react-final-form';
 import { Select } from 'mui-rff';
-import { Paper, Grid, Button, MenuItem } from '@material-ui/core';
-import 'react-phone-input-2/lib/style.css';
-import { containers } from '../constants/Constants';
+import { Grid, MenuItem } from '@material-ui/core';
+import { containers, UserData } from '../constants/Constants';
+import emailjs from '@emailjs/browser';
 import {
 	PhoneInputStyled,
 	FieldWrapper,
@@ -11,6 +11,8 @@ import {
 	SendButton,
 	TextFieldForm,
 } from '../Styles/StartedFormSectionStyles';
+import 'react-phone-input-2/lib/style.css';
+
 
 const validate = (values) => {
 	const errors = {};
@@ -24,9 +26,16 @@ const validate = (values) => {
 };
 
 const FormComponent = () => {
+	const formRef = useRef();
 	const [phoneNumber, setPhoneNumber] = useState();
 	const onSubmit = async (values) => {
-		window.alert(JSON.stringify({ ...values, ...phoneNumber }, 0, 2));
+
+		emailjs.sendForm(UserData.serviceID, UserData.templateID, formRef.current, UserData.publicKey)
+			.then((result) => {
+				console.log(result.text);
+			}, (error) => {
+				console.log(error.text);
+			});
 	};
 
 	return (
@@ -34,7 +43,7 @@ const FormComponent = () => {
 			onSubmit={onSubmit}
 			validate={validate}
 			render={({ handleSubmit, form, submitting, pristine, values }) => (
-				<form onSubmit={handleSubmit} noValidate>
+				<form ref={formRef} onSubmit={handleSubmit} noValidate>
 					<div style={{ boxShadow: 'none', background: '#141B2A' }}>
 						<Grid alignItems="flex-start" spacing={2}>
 							<FieldWrapper>

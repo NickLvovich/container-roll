@@ -1,9 +1,6 @@
 import React from 'react';
-import { contactsData } from '../constants/Constants';
 import {
-	ContactImg,
 	ContactSectionContainer,
-	ContactTextOverlay,
 	ContactTypography,
 	ContactWrapper,
 	CopyRightTypography,
