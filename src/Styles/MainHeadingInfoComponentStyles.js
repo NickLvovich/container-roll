@@ -57,7 +57,7 @@ export const PrimaryButton = styled(Button)`
 		width: 100%;
 		background-color: ${(props) => (props.white ? '#ffff' : '#3f65ea')};
 		height: 52px;
-		box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+		box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 		color: ${(props) => (props.white ? '#3f65ea' : '#ffff')};
 		border-radius: 8px;
 		text-transform: capitalize;
@@ -75,7 +75,7 @@ export const PrimaryButton = styled(Button)`
 		&:hover {
 			background: #1e3ca9;
       color:  ${(props) => (props.white ? '#ffff' : '#ffff')};
-			box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+			box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 		}
 	}
 `;
