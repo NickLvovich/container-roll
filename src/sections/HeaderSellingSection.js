@@ -8,6 +8,7 @@ const HeaderSellingSection = ({ screenType, setOpen, open, handleOpen }) => {
 	return (
 		<HeaderContainer screenType={screenType}>
 			<NavigationComponent
+				screenType={screenType}
 				setOpen={setOpen}
 				open={open}
 				handleOpen={handleOpen}

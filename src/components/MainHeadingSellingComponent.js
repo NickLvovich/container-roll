@@ -4,8 +4,9 @@ import {
 	MainHeadingSecondContainer,
 	TypographySellingHeading,
 	TypographySellingHeadingAddition,
-	ButtonWrapper,
+	ButtonWrapper, AnchorLinkStyled,
 } from '../Styles/MainHeadingInfoComponentStyles';
+import {FormattedMessage} from "react-intl";
 
 const MainHeadingSellingComponent = ({ screenType }) => {
 	return (
@@ -16,12 +17,20 @@ const MainHeadingSellingComponent = ({ screenType }) => {
 					: 'Take a container into leeasing'}
 			</TypographySellingHeading>
 			<TypographySellingHeadingAddition>
-				A ship is a large watercraft that travels the world's oceans and other
-				sufficiently deep
+				{screenType === 'selling'
+					? <FormattedMessage id="selling-second-heading" />
+					: <FormattedMessage id="leasing-second-heading" />
+				}
 			</TypographySellingHeadingAddition>
 			<ButtonWrapper>
-				<PrimaryButton>Get started!</PrimaryButton>
-				{screenType === 'selling' && <PrimaryButton white>Sell</PrimaryButton>}
+				<AnchorLinkStyled to={`#form`} title="move to form">
+					<PrimaryButton>
+						<FormattedMessage id="get-started" />
+					</PrimaryButton>
+				</AnchorLinkStyled>
+				{screenType === 'selling' && <AnchorLinkStyled to={`#form`} title="move to form">
+					<PrimaryButton white>Sell</PrimaryButton>
+				</AnchorLinkStyled>}
 			</ButtonWrapper>
 		</MainHeadingSecondContainer>
 	);

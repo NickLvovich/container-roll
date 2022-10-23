@@ -14,7 +14,7 @@
 		"serve": "gatsby serve",
 		"clean": "gatsby clean",
 		"lint": "eslint . --fix --max-warnings=0",
-		"format": "prettier . --write"
+		"format": "prettier --write src/**/*.js{,x}"
 	},
 	"dependencies": {
 		"@date-io/core": "^2.14.0",
@@ -37,8 +37,9 @@
 		"eslint-plugin-jsx-a11y": "^6.6.1",
 		"final-form": "^4.20.7",
 		"gatsby": "^4.18.0",
+		"gatsby-plugin-anchor-links": "^1.2.1",
 		"gatsby-plugin-image": "^2.18.0",
-		"gatsby-plugin-manifest": "^4.18.0",
+		"gatsby-plugin-manifest": "^4.24.0",
 		"gatsby-plugin-prettier-eslint": "^1.0.6",
 		"gatsby-plugin-react-helmet": "^5.18.0",
 		"gatsby-plugin-sharp": "^4.18.0",

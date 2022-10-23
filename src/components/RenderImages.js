@@ -4,8 +4,21 @@ import { Link } from '../Styles/RenderImagesStyles';
 function RenderImages({ imgArr }) {
 	return imgArr.map((item, key) => {
 		return (
-			<Link key={key} href={item.link}>
-				<img width={150} height={40.55} alt={item.name} src={item.img} />
+			<Link
+				style={{
+					backgroundColor: item.backgroundColor,
+					width: item.width,
+					height: item.height,
+					padding: item.padding,
+					marginLeft: 10
+			}}
+				key={key} href={item.link}>
+				<img
+					width={'100%'}
+					height={'100%'}
+					alt={item.name}
+					src={item.img}
+				/>
 			</Link>
 		);
 	});

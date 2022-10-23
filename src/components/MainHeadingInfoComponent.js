@@ -4,19 +4,24 @@ import {
 	TypographyHeading,
 	TypographyHeadingAddition,
 	PrimaryButton,
+	AnchorLinkStyled,
 } from '../Styles/MainHeadingInfoComponentStyles';
+import { FormattedMessage } from 'react-intl';
 
 const MainHeadingInfoComponent = () => {
 	return (
 		<MainHeadingContainer>
 			<TypographyHeading>
-				20 years providing transport companies with the high-quality containers
+				<FormattedMessage id="heading-first" />
 			</TypographyHeading>
 			<TypographyHeadingAddition>
-				A ship is a large watercraft that travels the world's oceans and other
-				sufficiently deep
+				<FormattedMessage id="heading-second" />
 			</TypographyHeadingAddition>
-			<PrimaryButton>Get started!</PrimaryButton>
+			<AnchorLinkStyled to={`#form`} title="move to form">
+				<PrimaryButton>
+					<FormattedMessage id="get-started" />
+				</PrimaryButton>
+			</AnchorLinkStyled>
 		</MainHeadingContainer>
 	);
 };

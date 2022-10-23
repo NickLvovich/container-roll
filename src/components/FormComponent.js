@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import { Form } from 'react-final-form';
 import { Select } from 'mui-rff';
 import { Grid, MenuItem } from '@material-ui/core';
-import { containers, UserData } from '../constants/Constants';
+import {containers, containersData, UserData} from '../constants/Constants';
 import emailjs from '@emailjs/browser';
 import {
 	PhoneInputStyled,
@@ -12,7 +12,7 @@ import {
 	TextFieldForm,
 } from '../Styles/StartedFormSectionStyles';
 import 'react-phone-input-2/lib/style.css';
-
+import {FormattedMessage} from "react-intl";
 
 const validate = (values) => {
 	const errors = {};
@@ -29,13 +29,21 @@ const FormComponent = () => {
 	const formRef = useRef();
 	const [phoneNumber, setPhoneNumber] = useState();
 	const onSubmit = async (values) => {
-
-		emailjs.sendForm(UserData.serviceID, UserData.templateID, formRef.current, UserData.publicKey)
-			.then((result) => {
-				console.log(result.text);
-			}, (error) => {
-				console.log(error.text);
-			});
+		emailjs
+			.sendForm(
+				UserData.serviceID,
+				UserData.templateID,
+				formRef.current,
+				UserData.publicKey
+			)
+			.then(
+				(result) => {
+					console.log(result.text);
+				},
+				(error) => {
+					console.log(error.text);
+				}
+			);
 	};
 
 	return (
@@ -43,14 +51,23 @@ const FormComponent = () => {
 			onSubmit={onSubmit}
 			validate={validate}
 			render={({ handleSubmit, form, submitting, pristine, values }) => (
-				<form ref={formRef} onSubmit={handleSubmit} noValidate>
+				<form
+					id="form"
+					ref={formRef}
+					onSubmit={handleSubmit}
+					noValidate
+				>
 					<div style={{ boxShadow: 'none', background: '#141B2A' }}>
 						<Grid alignItems="flex-start" spacing={2}>
 							<FieldWrapper>
 								<TextFieldForm
 									helperText="Place your full name"
 									variant="filled"
-									label="Name"
+									label={
+										<FormattedMessage
+											id="name"
+										/>
+									}
 									name="name"
 									margin="none"
 									style={{ background: 'white', borderRadius: 8 }}
@@ -61,13 +78,18 @@ const FormComponent = () => {
 								<PhoneInputStyled
 									onChange={(phone) => setPhoneNumber({ phone })}
 									name="phone"
-									label="Phone"
+									label={
+										<FormattedMessage
+											id="phone"
+										/>
+									}
 									country="gb"
 									masks={{ fr: 'xx-xxx-xxx', at: 'xx-xxx-xxx' }}
 									isValid={(value, country) => {
 										if (value.match(/12345/)) {
-											return `Invalid value: ${  value  }, ${  country.name}`;
-										} return !value.match(/1234/);
+											return `Invalid value: ${value}, ${country.name}`;
+										}
+										return !value.match(/1234/);
 									}}
 									inputProps={{
 										name: 'phone',
@@ -81,7 +103,11 @@ const FormComponent = () => {
 									variant="filled"
 									style={{ background: 'white', borderRadius: 8 }}
 									type="email"
-									label="Email"
+									label={
+										<FormattedMessage
+											id="email"
+										/>
+									}
 									name="email"
 									margin="none"
 									required
@@ -95,9 +121,9 @@ const FormComponent = () => {
 									formControlProps={{ margin: 'none' }}
 									variant="filled"
 								>
-									{containers.map((option, id) => (
-										<MenuItem key={id} value={option.value}>
-											{option.label}
+									{containersData.map((option, id) => (
+										<MenuItem key={id} value={option.baige}>
+											{option.baige}
 										</MenuItem>
 									))}
 								</Select>
@@ -116,7 +142,7 @@ const FormComponent = () => {
 									onClick={form.reset}
 									disabled={submitting || pristine}
 								>
-									Reset
+									<FormattedMessage id="reset" />
 								</ResetButton>
 								<SendButton
 									variant="contained"
@@ -124,7 +150,7 @@ const FormComponent = () => {
 									type="submit"
 									disabled={submitting}
 								>
-									Send an application
+									<FormattedMessage id="send-button" />
 								</SendButton>
 							</Grid>
 						</Grid>

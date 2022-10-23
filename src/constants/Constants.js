@@ -10,77 +10,95 @@ import SmallDryCubeContainer from '../images/SmallDryCubeContainer.png';
 import HighCube from '../images/HighCube.png';
 import BigDryCube from '../images/BigDryCube.png';
 import RefrigeratorContainer from '../images/RefrigeratorContainer.png';
+import admiral from "../images/admiral.svg";
+import cma from "../images/cma.png";
+import cosco from "../images/cosco.png";
+import oocl from "../images/oocl.png";
+import zim from "../images/zim.png";
+import textainer from "../images/textainer.png";
 
 export const companies = [
 	{
-		name: 'Transistor',
-		link: 'https://soundcloud.com/',
-		img: transistor,
+		name: 'admiral',
+		link: 'https://www.acolines.com/',
+		img: admiral,
+		width: 200,
+		height: 100
 	},
 	{
-		name: 'Transistor',
-		link: 'https://soundcloud.com/',
-		img: transistor,
+		name: 'cma-cgm',
+		link: 'https://www.cma-cgm.com/',
+		img: cma,
+		width: 150,
+		height: 100
 	},
 	{
-		name: 'Transistor',
-		link: 'https://soundcloud.com/',
-		img: transistor,
+		name: 'cosco',
+		link: 'https://lines.coscoshipping.com/',
+		img: cosco,
+		width: 80,
+		height: 80
 	},
 	{
-		name: 'Transistor',
-		link: 'https://soundcloud.com/',
-		img: transistor,
+		name: 'OOCL',
+		link: 'https://www.oocl.com/',
+		img: oocl,
+		width: 130,
+		height: 50
 	},
 	{
-		name: 'Transistor',
-		link: 'https://soundcloud.com/',
-		img: transistor,
+		name: 'ZIM',
+		link: 'https://www.zim.com/',
+		img: zim,
+		backgroundColor: '#19202E',
+		width: 110,
+		height: 40,
+		padding: 8,
 	},
 	{
-		name: 'Transistor',
-		link: 'https://soundcloud.com/',
-		img: transistor,
-	},
+		name: 'textainer',
+		link: 'https://www.textainer.com/',
+		img: textainer,
+		backgroundColor: '#19202E',
+		width: 30,
+		height: 100,
+		padding: 8,
+	}
 ];
 
 export const serviceData = [
 	{
 		img: graph,
-		alt: 'Selling/buying containers',
-		baige: 'Always fair',
-		heading: 'Selling/buying containers',
-		text: 'Ships are typically larger than boats, but there is no universally accepted distinction between  ',
+		alt: 'selling-buying-containers',
+		baige: 'always-fair',
+		heading: 'selling-buying-containers',
+		text: 'selling-buying-second-text',
 	},
 	{
 		img: logistics,
-		alt: 'Container leasing',
-		baige: 'Always fair',
-		heading: 'Container leasing',
-		text: 'Ships are typically larger than boats, but there is no universally accepted distinction between  ',
+		alt: 'leasing-containers',
+		baige: 'always-fair',
+		heading: 'leasing-containers',
+		text: 'container-leasing-second-text',
 	},
 ];
 
 export const questions = [
 	{
-		question: 'How do you make holy water?',
-		answer:
-			'You boil the hell out of it. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat. ',
+		question: 'first-question',
+		answer: 'first-answer',
 	},
 	{
-		question: "What's the best thing about Switzerland?",
-		answer:
-			"I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+		question: 'second-question',
+		answer: 'second-answer',
 	},
 	{
-		question: 'What do you call someone with no body and no nose?',
-		answer:
-			'Nobody knows. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.',
+		question: 'third-question',
+		answer: 'third-answer',
 	},
 	{
-		question: 'Why do you never see elephants hiding in trees?',
-		answer:
-			"Because they're so good at it. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+		question: 'fourth-question',
+		answer: 'fourth-answer',
 	},
 ];
 
@@ -102,11 +120,11 @@ export const containers = [
 export const contactsData = [
 	{
 		img: phone,
-		text: '48 884 234 212',
+		text: '+380 67 484 8548',
 	},
 	{
 		img: mail,
-		text: 'yourmail@mail.com',
+		text: 'office@cr.express',
 	},
 ];
 
@@ -114,24 +132,24 @@ export const workSystem = [
 	{
 		img: Check,
 		heading: 'Leave a request on the site',
-		text: 'Ships are typically larger than boats, but there is no universally accepted distinction between the two. ',
+		text: 'leave-request',
 	},
 	{
 		img: Lightning,
 		heading: 'Manager will contact you ',
-		text: 'Ships are typically larger than boats, but there is no universally accepted distinction between the two. ',
+		text: 'manage-contact',
 	},
 	{
 		img: Case,
 		heading: 'Your order done!',
-		text: 'Ships are typically larger than boats, but there is no universally accepted distinction between the two. ',
+		text: 'finish-manage',
 	},
 ];
 
 export const containersData = [
 	{
 		img: SmallDryCubeContainer,
-		imgSmall:  SmallDryCubeContainer,
+		imgSmall: SmallDryCubeContainer,
 		alt: 'Selling/buying containers',
 		baige: "Marine 20' DC (Dry Cube)",
 		heading: 'Selling/buying containers',
@@ -143,7 +161,7 @@ export const containersData = [
 		iWidth: 'Width: 2350 mm',
 		iLong: 'Long: 5898 mm',
 		doorHeight: 'Height: 2280 mm',
-		doorWidth: 'Width: 2340 mm'
+		doorWidth: 'Width: 2340 mm',
 	},
 	{
 		img: HighCube,
@@ -159,7 +177,7 @@ export const containersData = [
 		iWidth: 'Width: 2350 mm',
 		iLong: 'Long: 12030 mm',
 		doorHeight: 'Height: 2579 mm',
-		doorWidth: 'Width: 240 mm'
+		doorWidth: 'Width: 240 mm',
 	},
 	{
 		img: BigDryCube,
@@ -175,7 +193,7 @@ export const containersData = [
 		iWidth: 'Width: 2350 mm',
 		iLong: 'Long: 12035 mm',
 		doorHeight: 'Height: 2274 mm',
-		doorWidth: 'Width: 2339 mm'
+		doorWidth: 'Width: 2339 mm',
 	},
 	{
 		img: RefrigeratorContainer,
@@ -191,12 +209,12 @@ export const containersData = [
 		iWidth: 'Width: 2294 mm',
 		iLong: 'Long: 11577 mm',
 		doorHeight: 'Height: 2238 mm',
-		doorWidth: 'Width: 2286 mm'
-	}
+		doorWidth: 'Width: 2286 mm',
+	},
 ];
 
 export const UserData = {
-		serviceID: `service_gnvaejb`, //userID
-		templateID: `template_2v0fdc6`,         //templateID
-		publicKey: `J14-B7lVxUoYku9ma`
-}
+	serviceID: `service_gnvaejb`, //userID
+	templateID: `template_2v0fdc6`, //templateID
+	publicKey: `J14-B7lVxUoYku9ma`,
+};

@@ -5,6 +5,7 @@ import {
 	TypographyResultsAddition,
 	TypographyResultsHeading,
 } from '../Styles/ResultsStyles';
+import { FormattedMessage } from 'react-intl';
 
 const ResultsComponent = () => {
 	return (
@@ -12,18 +13,20 @@ const ResultsComponent = () => {
 			<ResultsTextWrapper>
 				<TypographyResultsHeading>12 000+</TypographyResultsHeading>
 				<TypographyResultsAddition>
-					containers bought/sold
+					<FormattedMessage id={`bought-sold`} />
 				</TypographyResultsAddition>
 			</ResultsTextWrapper>
 			<ResultsTextWrapper>
 				<TypographyResultsHeading>20</TypographyResultsHeading>
 				<TypographyResultsAddition>
-					years of experience
+					<FormattedMessage id={`experience`} />
 				</TypographyResultsAddition>
 			</ResultsTextWrapper>
 			<ResultsTextWrapper>
 				<TypographyResultsHeading>900</TypographyResultsHeading>
-				<TypographyResultsAddition>clients all along</TypographyResultsAddition>
+				<TypographyResultsAddition>
+					<FormattedMessage id={`clients`} />
+				</TypographyResultsAddition>
 			</ResultsTextWrapper>
 		</ResultsBlock>
 	);

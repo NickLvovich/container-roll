@@ -1,7 +1,7 @@
 module.exports = {
 	siteMetadata: {
 		title: `СontaineRRoll`,
-		siteUrl: `https://www.yourdomain.tld`,
+		siteUrl: `https://www.cr.express`,
 	},
 	plugins: [
 		// {
@@ -44,6 +44,21 @@ module.exports = {
 		// 		icon: 'src/images/icon.png',
 		// 	},
 		// },
+		{
+			resolve: `gatsby-plugin-manifest`,
+			options: {
+				name: `СontaineRRoll`,
+				short_name: `RR`,
+				start_url: `/`,
+				icon: `src/images/favLogo.png`, // This path is relative to the root of the site.
+			},
+		},
+		{
+			resolve: "gatsby-plugin-anchor-links",
+			options: {
+				offset: -100
+			}
+		},
 		'gatsby-plugin-styled-components',
 		'gatsby-plugin-image',
 		'gatsby-plugin-react-helmet',
@@ -57,23 +72,6 @@ module.exports = {
 				path: './src/images/',
 			},
 			__key: 'images',
-		},
-		{
-			resolve: 'gatsby-plugin-favicons',
-			options: {
-				logo: './src/images/favLogo.png',
-				appName: 'СontaineRRoll',
-				background: '#000',
-				icons: {
-					android: true,
-					appleIcon: true,
-					appleStartup: true,
-					coast: false,
-					favicons: true,
-					yandex: false,
-					windows: false
-				}
-			}
 		},
 	],
 };

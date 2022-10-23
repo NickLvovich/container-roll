@@ -1,22 +1,25 @@
-import React, { useState } from 'react';
+import React from 'react';
 import FormComponent from '../components/FormComponent';
 import { StartedFormWrapper } from '../Styles/StartedFormSectionStyles';
 import {
 	TrustedHeadingTypography,
 	TrustedTypography,
 } from '../Styles/TrustedCompaniesSectionStyles';
+import { FormattedMessage } from 'react-intl';
 
 const StartedFormSection = () => {
+
 	return (
 		<StartedFormWrapper>
 			<div>
-				<TrustedHeadingTypography>Get started!</TrustedHeadingTypography>
+				<TrustedHeadingTypography>
+					<FormattedMessage id="get-started-form" />
+				</TrustedHeadingTypography>
 				<TrustedTypography>
-					Ships are typically larger than boats, but there is no universally
-					accepted distinction between the two.
+					<FormattedMessage id="form-text" />
 				</TrustedTypography>
 			</div>
-			<FormComponent />
+			<FormComponent/>
 		</StartedFormWrapper>
 	);
 };

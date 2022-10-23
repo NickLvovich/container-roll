@@ -8,17 +8,17 @@ import {
 } from '../Styles/TrustedCompaniesSectionStyles';
 import { companies } from '../constants/Constants';
 import RenderImages from '../components/RenderImages';
+import { FormattedMessage } from 'react-intl';
 
 function TrustedCompaniesSection() {
 	return (
 		<TrustedContainer>
 			<TypographyWrapper>
 				<TypographyHeading>
-					Trusted by companies from over 20 countries
+					<FormattedMessage id="trusted-companies" />
 				</TypographyHeading>
 				<TypographyMainText>
-					A ship is a large watercraft that travels the world's oceans and other
-					sufficiently deep
+					<FormattedMessage id="trusted-companies-second-text" />
 				</TypographyMainText>
 			</TypographyWrapper>
 			<PartnersBlock>

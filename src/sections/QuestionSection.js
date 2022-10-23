@@ -11,16 +11,17 @@ import {
 	QuestionsComponentWrapper,
 	TypographyHeadingQuestionWrapper,
 } from '../Styles/QuestionsComponentStyles';
-
+import { FormattedMessage } from 'react-intl';
 
 const QuestionSection = () => {
 	return (
 		<TrustedContainer>
 			<TypographyHeadingQuestionWrapper>
-				<TypographyHeading>Frequently asked questions</TypographyHeading>
+				<TypographyHeading>
+					<FormattedMessage id="frequently-asked-questions" />
+				</TypographyHeading>
 				<TypographyQuestionsMainText>
-					Can’t find the answer you’re looking for? Reach out to our customer
-					support team.
+					<FormattedMessage id="customer-questions" />
 				</TypographyQuestionsMainText>
 			</TypographyHeadingQuestionWrapper>
 			<QuestionsComponentWrapper>

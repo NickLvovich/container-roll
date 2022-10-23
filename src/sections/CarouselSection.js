@@ -7,7 +7,8 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Navigation, Pagination, Mousewheel, Keyboard } from 'swiper';
 import {
-	CarouselHeading, CarouselHeadingText,
+	CarouselHeading,
+	CarouselHeadingText,
 	CarouselSectionContainer,
 	ContainerWrapperData,
 	DataWrapper,
@@ -16,18 +17,20 @@ import {
 	DataWrapperItemText,
 	Img,
 	SwiperContainer,
-	SwiperHeading,
 	SwiperHeadingMob,
 } from '../Styles/CarouselSectionStyles';
 import { containersData } from '../constants/Constants';
 import { useWindowWidth } from '../hooks';
+import { FormattedMessage } from "react-intl";
 
 export const CarouselSection = () => {
 	const width = useWindowWidth();
 	return (
 		<CarouselSectionContainer>
 			<CarouselHeading>Providing different sizes of containers</CarouselHeading>
-			<CarouselHeadingText>A ship is a large watercraft that travels the world's oceans and other sufficiently deep </CarouselHeadingText>
+			<CarouselHeadingText>
+				<FormattedMessage id="providing-containers" />
+			</CarouselHeadingText>
 			<SwiperContainer
 				cssMode
 				navigation
@@ -44,7 +47,7 @@ export const CarouselSection = () => {
 							alt={containerItem.alt}
 						/>
 						<ContainerWrapperData>
-								<SwiperHeadingMob>{containerItem.baige}</SwiperHeadingMob>
+							<SwiperHeadingMob>{containerItem.baige}</SwiperHeadingMob>
 							<DataWrapper>
 								<DataWrapperItem>
 									<DataWrapperItemHeading>Volume</DataWrapperItemHeading>
@@ -65,7 +68,9 @@ export const CarouselSection = () => {
 									</DataWrapperItemText>
 								</DataWrapperItem>
 								<DataWrapperItem>
-									<DataWrapperItemHeading>Inside paramerts</DataWrapperItemHeading>
+									<DataWrapperItemHeading>
+										Inside paramerts
+									</DataWrapperItemHeading>
 									<DataWrapperItemText>
 										{containerItem.iHeight}
 									</DataWrapperItemText>

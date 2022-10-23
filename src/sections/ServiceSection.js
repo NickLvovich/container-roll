@@ -6,14 +6,16 @@ import {
 } from '../Styles/TrustedCompaniesSectionStyles';
 import ContainerServiceComponent from '../components/ContainerServiceComponent';
 import { serviceData } from '../constants/Constants';
+import { FormattedMessage } from 'react-intl';
 
 const ServiceSection = () => {
 	return (
 		<ServiceSectionContainer>
-			<TypographyHeading>Services we provide</TypographyHeading>
+			<TypographyHeading>
+				<FormattedMessage id="services-we-provide" />
+			</TypographyHeading>
 			<TypographyMainText>
-				A ship is a large watercraft that travels the world's oceans and other
-				sufficiently deep
+				<FormattedMessage id="services-we-provide-second-text" />
 			</TypographyMainText>
 			{serviceData.map((serviceData, key) => {
 				return (

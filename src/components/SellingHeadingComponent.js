@@ -5,8 +5,9 @@ import {
 	TypographyHeadingAddition,
 	PrimaryButton,
 } from '../Styles/MainHeadingInfoComponentStyles';
+import { FormattedMessage } from 'react-intl';
 
-const MainHeadingInfoComponent = () => {
+const SellingHeadingComponent = () => {
 	return (
 		<MainHeadingContainer>
 			<TypographyHeading>
@@ -16,8 +17,10 @@ const MainHeadingInfoComponent = () => {
 				A ship is a large watercraft that travels the world's oceans and other
 				sufficiently d eep
 			</TypographyHeadingAddition>
-			<PrimaryButton>Get started!</PrimaryButton>
+			<PrimaryButton>
+				<FormattedMessage id="get-started" />
+			</PrimaryButton>
 		</MainHeadingContainer>
 	);
 };
-export default MainHeadingInfoComponent;
+export default SellingHeadingComponent;

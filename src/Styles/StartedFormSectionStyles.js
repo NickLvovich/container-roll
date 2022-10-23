@@ -5,7 +5,7 @@ import { TextField } from 'mui-rff';
 
 export const StartedFormWrapper = styled.div`
 	//background: no-repeat url(${BG});
-	background-color: #141B2A;
+	background-color: #141b2a;
 	//background-size: cover;
 	padding: 30px 20px 0 20px;
 	@media (min-width: 1024px) {
@@ -55,8 +55,6 @@ export const ResetButton = styled(Button)`
 `;
 
 export const SendButton = styled(Button)`
-	.MuiButtonBase-root {
-	}
 	margin-top: 40px !important;
 	background: #3f65ea;
 	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);

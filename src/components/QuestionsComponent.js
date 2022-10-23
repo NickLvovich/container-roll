@@ -4,13 +4,18 @@ import {
 	QuestionWrapper,
 	TypographyQuestion,
 } from '../Styles/QuestionsComponentStyles';
+import { FormattedMessage } from 'react-intl';
 
 const QuestionsComponent = ({ questions }) => {
 	return questions.map((faq) => {
 		return (
 			<QuestionWrapper>
-				<TypographyQuestion>{faq.question}</TypographyQuestion>
-				<TypographyMainText>{faq.answer}</TypographyMainText>
+				<TypographyQuestion>
+					<FormattedMessage id={`${faq.question}`} />
+				</TypographyQuestion>
+				<TypographyMainText>
+					<FormattedMessage id={`${faq.answer}`} />
+				</TypographyMainText>
 			</QuestionWrapper>
 		);
 	});

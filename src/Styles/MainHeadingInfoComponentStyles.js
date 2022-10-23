@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 import Button from '@mui/material/Button';
+import {AnchorLink} from "gatsby-plugin-anchor-links";
 
+export const AnchorLinkStyled = styled(AnchorLink)`
+  text-decoration: none;
+`
 export const MainHeadingContainer = styled.nav`
 	display: grid;
 	padding: 24px;
@@ -69,6 +73,7 @@ export const PrimaryButton = styled(Button)`
 		}
 		&:hover {
 			background: #1e3ca9;
+      color:  ${(props) => (props.white ? '#ffff' : '#ffff')};
 			box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
 		}
 	}

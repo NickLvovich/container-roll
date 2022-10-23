@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import { Link } from 'gatsby';
+import Select from '@mui/material/Select';
+
 
 export const NavigationTab = styled.nav`
 	display: grid;
@@ -21,6 +23,13 @@ export const TypographyTranslate = styled.span`
 	min-width: 40px;
 	font-size: 16px;
 `;
+
+export const SelectOptions = styled(Select)`
+  .MuiList-root{
+    display: block;
+  }
+`
+
 
 export const BurgerWrapper = styled.div`
 	display: flex;
