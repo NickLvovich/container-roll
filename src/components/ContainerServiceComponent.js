@@ -8,6 +8,7 @@ import {
 } from '../Styles/ContainerServiceStyles';
 import { TypographyMainText } from '../Styles/TrustedCompaniesSectionStyles';
 import { FormattedMessage } from 'react-intl';
+import { AnchorLinkStyled } from "../Styles/MainHeadingInfoComponentStyles";
 
 const ContainerServiceComponent = ({ serviceData }) => {
 	return (
@@ -23,7 +24,9 @@ const ContainerServiceComponent = ({ serviceData }) => {
 				<FormattedMessage id={`${serviceData.text}`} />
 			</TypographyMainText>
 			<ServiceButton>
-				<FormattedMessage id="learn-more" />
+				<AnchorLinkStyled to={`#form`} title="move to form">
+					<FormattedMessage id="learn-more" />
+				</AnchorLinkStyled>
 			</ServiceButton>
 		</ServiceBlock>
 	);
