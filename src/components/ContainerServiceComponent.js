@@ -23,11 +23,12 @@ const ContainerServiceComponent = ({ serviceData }) => {
 			<TypographyMainText>
 				<FormattedMessage id={`${serviceData.text}`} />
 			</TypographyMainText>
-			<ServiceButton>
-				<AnchorLinkStyled to={`#form`} title="move to form">
+			<AnchorLinkStyled to={`#form`} title="move to form">
+				<ServiceButton>
 					<FormattedMessage id="learn-more" />
-				</AnchorLinkStyled>
-			</ServiceButton>
+				</ServiceButton>
+			</AnchorLinkStyled>
+
 		</ServiceBlock>
 	);
 };

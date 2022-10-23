@@ -7,8 +7,12 @@ export const NavigationTab = styled.nav`
 	display: grid;
 	padding: 24px;
 	border-bottom: 1px solid #323b4e;
-	grid-template-columns: 2.3fr 2fr 1fr;
+	//grid-template-columns: 2.3fr 2fr 1fr;
+	grid-template-columns: 2.3fr 2fr;
 	align-items: center;
+  @media (min-width: 1024px) {
+    grid-template-columns: 2.3fr 2fr 1fr;
+  }
 `;
 export const NavTranslate = styled.span`
 	display: flex;

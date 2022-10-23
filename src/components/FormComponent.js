@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { Form } from 'react-final-form';
 import { Select } from 'mui-rff';
-import { Grid, MenuItem } from '@material-ui/core';
+import {Button, Grid, MenuItem} from '@material-ui/core';
 import {containers, containersData, UserData} from '../constants/Constants';
 import emailjs from '@emailjs/browser';
 import {
@@ -13,6 +13,7 @@ import {
 } from '../Styles/StartedFormSectionStyles';
 import 'react-phone-input-2/lib/style.css';
 import {FormattedMessage} from "react-intl";
+import {Alert, Snackbar, Stack} from "@mui/material";
 
 const validate = (values) => {
 	const errors = {};
@@ -27,8 +28,18 @@ const validate = (values) => {
 
 const FormComponent = () => {
 	const formRef = useRef();
+	const [activeButton, setActiveButton] = useState(false)
+	const [open, setOpen] = useState(false)
+	const handleClose = (event, reason) => {
+		if (reason === 'clickaway') {
+			return;
+		}
+
+		setOpen(false);
+	};
 	const [phoneNumber, setPhoneNumber] = useState();
 	const onSubmit = async (values) => {
+		setActiveButton(true);
 		emailjs
 			.sendForm(
 				UserData.serviceID,
@@ -39,6 +50,8 @@ const FormComponent = () => {
 			.then(
 				(result) => {
 					console.log(result.text);
+					setActiveButton(false);
+					setOpen(true);
 				},
 				(error) => {
 					console.log(error.text);
@@ -148,13 +161,20 @@ const FormComponent = () => {
 									variant="contained"
 									color="primary"
 									type="submit"
-									disabled={submitting}
+									disabled={activeButton}
 								>
 									<FormattedMessage id="send-button" />
 								</SendButton>
 							</Grid>
 						</Grid>
 					</div>
+					<Stack spacing={2} sx={{ width: '100%' }}>
+						<Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+							<Alert onClose={handleClose} severity="success" sx={{ width: '100%' }}>
+								Your message has been sent successfully!
+							</Alert>
+						</Snackbar>
+					</Stack>
 				</form>
 			)}
 		/>

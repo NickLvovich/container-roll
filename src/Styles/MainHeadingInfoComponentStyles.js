@@ -4,6 +4,7 @@ import {AnchorLink} from "gatsby-plugin-anchor-links";
 
 export const AnchorLinkStyled = styled(AnchorLink)`
   text-decoration: none;
+  grid-area: ServiceButton;
 `
 export const MainHeadingContainer = styled.nav`
 	display: grid;
