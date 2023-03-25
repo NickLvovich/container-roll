@@ -9,9 +9,8 @@ const getTranslatedPath = (pathname, to) => {
     languagePath = '/' + currentPageLanguage
   }
 
-
   let outputPath = `${languagePath}${to}`;
-
+  console.log(outputPath, 'outputPath')
   const hasTrailingSlash = outputPath.endsWith("/");
   if (!hasTrailingSlash) {
     outputPath += "/";

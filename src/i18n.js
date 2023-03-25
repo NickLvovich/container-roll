@@ -1,4 +1,4 @@
-const languages = ['en', 'pl', 'ua'];
+const languages = ['en', 'pl', 'ua', 'rus', 'esp'];
 const defaultLanguage = 'en';
 
 exports.defaultLanguage = defaultLanguage;

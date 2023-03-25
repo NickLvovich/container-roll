@@ -4,7 +4,7 @@ import { Autoplay } from 'swiper';
 import { ImgGalleryItem, SwiperContainer } from '../Styles/SwiperGalleryStyles';
 import 'swiper/css';
 import 'swiper/css/effect-fade';
-import { containerImagesFirst, containerImagesSecond } from "../Constants";
+import { containerImagesFirst, containerImagesSecond } from '../constants/Constants';
 
 const SwiperGallerySection = ({first, reverseDirection}) => {
   const chooseImgArr = first ? containerImagesFirst : containerImagesSecond

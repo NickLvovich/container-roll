@@ -1,14 +1,14 @@
-import styled from 'styled-components';
-import { Link } from 'gatsby';
+import styled, { createGlobalStyle } from 'styled-components';
 import Select from '@mui/material/Select';
+import LinkTranslated from "../LinkTranslated";
+import MenuItem from '@mui/material/MenuItem';
 
 
 export const NavigationTab = styled.nav`
 	display: grid;
 	padding: 24px;
 	border-bottom: 1px solid #323b4e;
-	//grid-template-columns: 2.3fr 2fr 1fr;
-	grid-template-columns: 2.3fr 2fr;
+	grid-template-columns: 2.3fr 2fr 1fr;
 	align-items: center;
   @media (min-width: 1024px) {
     grid-template-columns: 2.3fr 2fr 1fr;
@@ -29,10 +29,43 @@ export const TypographyTranslate = styled.span`
 `;
 
 export const SelectOptions = styled(Select)`
-  .MuiList-root{
-    display: block;
+  && {
+    width: 120px;
+    background-color: inherit;
+    display: flex;
+    border: none;
+    .MuiSelect-select {
+      display: flex;
+      justify-content: flex-end;
+      padding-right: 20px !important;
+    }
+    .MuiList-root {
+      background-color: #242C3A;
+    }
+    .MuiSelect-icon {
+      color: white;
+    }
+    fieldset {
+      border: none;
+    }
   }
-`
+`;
+
+export const MenuItemStyled = styled(MenuItem)`
+  && {  
+    display: flex;
+    span {
+      color: #FFFFFF;
+    }
+`;
+
+export const DropdownMenuStyles = createGlobalStyle`
+  .custom-dropdown-menu {
+    .MuiList-root {
+      background-color: #242C3A;
+    }
+  }
+`;
 
 
 export const BurgerWrapper = styled.div`
@@ -54,7 +87,7 @@ export const ListElement = styled.li`
 	list-style-type: none;
 `;
 
-export const HeadingLink = styled(Link)`
+export const HeadingLink = styled(LinkTranslated)`
   position: relative;
   font-style: normal;
   font-weight: 400;

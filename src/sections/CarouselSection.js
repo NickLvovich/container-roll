@@ -27,7 +27,9 @@ export const CarouselSection = () => {
 	const width = useWindowWidth();
 	return (
 		<CarouselSectionContainer>
-			<CarouselHeading>Providing different sizes of containers</CarouselHeading>
+			<CarouselHeading>
+				<FormattedMessage id="providing-container-heading" />
+			</CarouselHeading>
 			<CarouselHeadingText>
 				<FormattedMessage id="providing-containers" />
 			</CarouselHeadingText>

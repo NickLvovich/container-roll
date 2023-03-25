@@ -1,6 +1,15 @@
 import graph from '../images/graph.png';
 import logistics from '../images/logistics.png';
-import transistor from '../images/transistor.png';
+import firstContainer from '../images/firstContainer.jpeg';
+import secondContainer from '../images/secondContainer.jpeg';
+import thirdContainer from '../images/thirdContainer.jpeg';
+import fourthContainer from '../images/fourthContainer.jpeg';
+import fifthContainer from '../images/fifthContainer.jpeg';
+import sixthContainer from '../images/sixthContainer.jpeg';
+import seventhContainer from '../images/secondContainer.jpeg';
+import eighthsContainer from '../images/eighthsContainer.jpeg';
+import ninthContainer from '../images/ninthContainer.jpeg';
+import tenthContainer from '../images/tenthContainer.jpeg';
 import phone from '../images/phone.png';
 import mail from '../images/mail.png';
 import Lightning from '../images/Lightning.png';
@@ -10,12 +19,12 @@ import SmallDryCubeContainer from '../images/SmallDryCubeContainer.png';
 import HighCube from '../images/HighCube.png';
 import BigDryCube from '../images/BigDryCube.png';
 import RefrigeratorContainer from '../images/RefrigeratorContainer.png';
-import admiral from "../images/admiral.svg";
-import cma from "../images/cma.png";
-import cosco from "../images/cosco.png";
-import oocl from "../images/oocl.png";
-import zim from "../images/zim.png";
-import textainer from "../images/textainer.png";
+import admiral from '../images/admiral.svg';
+import cma from '../images/cma.png';
+import cosco from '../images/cosco.png';
+import oocl from '../images/oocl.png';
+import zim from '../images/zim.png';
+import textainer from '../images/textainer.png';
 
 export const companies = [
 	{
@@ -131,17 +140,17 @@ export const contactsData = [
 export const workSystem = [
 	{
 		img: Check,
-		heading: 'Leave a request on the site',
+		heading: 'leave-request-heading',
 		text: 'leave-request',
 	},
 	{
 		img: Lightning,
-		heading: 'Manager will contact you ',
+		heading: 'manager-contact-heading',
 		text: 'manage-contact',
 	},
 	{
 		img: Case,
-		heading: 'Your order done!',
+		heading: 'done-heading',
 		text: 'finish-manage',
 	},
 ];
@@ -218,3 +227,56 @@ export const UserData = {
 	templateID: `template_2v0fdc6`, //templateID
 	publicKey: `J14-B7lVxUoYku9ma`,
 };
+export const containerImagesFirst = [
+	{
+		img: firstContainer,
+		key: 'first'
+	},
+	{
+		img: secondContainer,
+		key: 'second'
+	},
+	{
+		img: thirdContainer,
+		key: 'third'
+	},
+	{
+		img: fourthContainer,
+		key: 'fourth'
+	},
+	{
+		img: fifthContainer,
+		key: 'fifth'
+	},
+]
+
+export const containerImagesSecond = [
+	{
+		img: sixthContainer,
+		key: 'first'
+	},
+	{
+		img: seventhContainer,
+		key: 'second'
+	},
+	{
+		img: eighthsContainer,
+		key: 'third'
+	},
+	{
+		img: ninthContainer,
+		key: 'fourth'
+	},
+	{
+		img: tenthContainer,
+		key: 'fifth'
+	},
+]
+
+export const languages = [
+	{ code: 'en', label: 'En', flag: 'eng' },
+	{ code: 'pl', label: 'Pl', flag: 'poland' },
+	{ code: 'ua', label: 'Ua', flag: 'ukraine' },
+	{ code: 'esp', label: 'Esp', flag: 'spain' },
+	{ code: 'rus', label: 'Rus', flag: 'russia' },
+];

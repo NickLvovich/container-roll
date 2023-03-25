@@ -7,10 +7,11 @@ import {
 	HeadingLink,
 	ListElement,
 	ListWrapper,
-	NavigationTab,
+	NavigationTab, NavTranslate, TypographyTranslate,
 } from '../Styles/NavigationComponentStyles';
 import CloseBtn from '../images/close.svg';
 import { FormattedMessage } from 'react-intl';
+import BasicLanguageSelect from "./SelectLanguage";
 
 
 const NavigationComponent = ({ handleOpen, isCloseButton }) => {
@@ -19,17 +20,17 @@ const NavigationComponent = ({ handleOpen, isCloseButton }) => {
 		<NavigationTab>
 			<ListWrapper>
 				<ListElement>
-					<HeadingLink to="/selling/" activeClassName="active">
+					<HeadingLink href="/selling/" activeClassName="active">
 						<FormattedMessage id="selling-buying-containers" />
 					</HeadingLink>
 				</ListElement>
 				<ListElement>
-					<HeadingLink to="/leasing/" activeClassName="active">
+					<HeadingLink href="/leasing/" activeClassName="active">
 						<FormattedMessage id="leasing-containers" />
 					</HeadingLink>
 				</ListElement>
 			</ListWrapper>
-			<Link to="/">
+			<HeadingLink to="/">
 				<StaticImage
 					layout="fixed"
 					width={150}
@@ -37,7 +38,28 @@ const NavigationComponent = ({ handleOpen, isCloseButton }) => {
 					src="../images/Logo.png"
 					alt="СontaineRRoll"
 				/>
-			</Link>
+			</HeadingLink>
+			{/*<NavTranslate>*/}
+			{/*	<StaticImage*/}
+			{/*		style={{ marginRight: 10 }}*/}
+			{/*		layout="fixed"*/}
+			{/*		width={22}*/}
+			{/*		height={22}*/}
+			{/*		src="../images/eng.png"*/}
+			{/*		alt="translate-en"*/}
+			{/*	/>*/}
+			{/*	<TypographyTranslate>*/}
+			{/*		EN*/}
+			{/*		<StaticImage*/}
+			{/*			layout="fixed"*/}
+			{/*			width={15}*/}
+			{/*			height={10}*/}
+			{/*			src="../images/Arrow.png"*/}
+			{/*			alt="arrow-down"*/}
+			{/*		/>*/}
+			{/*	</TypographyTranslate>*/}
+			{/*</NavTranslate>*/}
+			<BasicLanguageSelect />
 			{!isCloseButton ? (
 				<BurgerWrapper>
 					<Button onClick={handleOpen}>

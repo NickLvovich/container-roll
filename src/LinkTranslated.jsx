@@ -4,12 +4,10 @@ import { getCurrentPageLanguage, getTranslatedPath } from './linkUtils';
 import { Link } from "gatsby";
 
 const LinkTranslated = ({ children = [], className = '', href = '/' }) => {
-	console.log(href, 'href')
 	return (
 		<Location>
 			{(locationProps) => {
 				const { pathname = '' } = locationProps.location;
-				console.log(pathname, 'pathname')
 				return (
 					<Link
 						className={className}

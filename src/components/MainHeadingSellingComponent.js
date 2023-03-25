@@ -13,8 +13,8 @@ const MainHeadingSellingComponent = ({ screenType }) => {
 		<MainHeadingSecondContainer>
 			<TypographySellingHeading>
 				{screenType === 'selling'
-					? 'Buy or sell a containers on favorable terms'
-					: 'Take a container into leeasing'}
+					? <FormattedMessage id="buy-sell-containers" />
+					: <FormattedMessage id="take-containers-leasing" />}
 			</TypographySellingHeading>
 			<TypographySellingHeadingAddition>
 				{screenType === 'selling'
@@ -29,7 +29,9 @@ const MainHeadingSellingComponent = ({ screenType }) => {
 					</PrimaryButton>
 				</AnchorLinkStyled>
 				{screenType === 'selling' && <AnchorLinkStyled to={`#form`} title="move to form">
-					<PrimaryButton white>Sell</PrimaryButton>
+					<PrimaryButton white>
+						<FormattedMessage id="sell" />
+					</PrimaryButton>
 				</AnchorLinkStyled>}
 			</ButtonWrapper>
 		</MainHeadingSecondContainer>
